@@ -18,7 +18,9 @@ productsView.elements.productsContainer.addEventListener(
     if (action === "plus" || action === "minus") {
       const productId = +event.target.closest(".card").dataset.id;
 
-      productsModel.updateCounter(productId, action);
+      const product = productsModel.updateCounter(productId, action);
+
+      productsView.updateCounter(product);
     }
   }
 );

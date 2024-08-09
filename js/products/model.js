@@ -23,6 +23,6 @@ export default class Model {
       --product.counter;
     }
 
-    console.log(product);
+    return product;
   }
 }
