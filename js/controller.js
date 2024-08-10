@@ -1,7 +1,10 @@
 import ProductsModel from "./products/model.js";
+import CartModel from "./cart/model.js";
+
 import * as productsView from "./products/view.js";
 
 const productsModel = new ProductsModel();
+const cartModel = new CartModel();
 
 async function getAndRenderProducts() {
   await productsModel.loadProducts();
