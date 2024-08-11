@@ -25,5 +25,13 @@ productsView.elements.productsContainer.addEventListener(
 
       productsView.updateCounter(product);
     }
+
+    if (action === "add-to-cart") {
+      const productId = +event.target.closest(".card").dataset.id;
+
+      const product = productsModel.getProduct(productId);
+
+      cartModel.addToCart(product);
+    }
   }
 );
