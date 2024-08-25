@@ -29,4 +29,8 @@ export default class Model {
   getProduct(id) {
     return this.products.find((item) => item.id === id);
   }
+
+  resetCounter(product) {
+    product.counter = 1;
+  }
 }

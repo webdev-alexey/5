@@ -35,6 +35,10 @@ productsView.elements.productsContainer.addEventListener(
       cartModel.addToCart(product);
 
       cartView.renderCart(cartModel.cart);
+
+      productsModel.resetCounter(product);
+
+      productsView.updateCounter(product);
     }
   }
 );
